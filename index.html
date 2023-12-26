@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addTodo(){
+            const title = document.getElementById("title").value;
+            const description = document.getElementById("description").value;
+            const originalHTML = document.getElementById("container1").innerHTML
+            // console.log(title);
+            // console.log(description);
+            document.getElementById("container1").innerHTML = originalHTML + `
+            <div> ${title} </div>
+            <div> ${description} </div>
+            <button> Mark as done</button>`;
+            // document.getElementById("container2").innerHTML = description;
+        }
+    </script>
+</head>
+<body>
+    <input id = "title" type="text" placeholder="Enter your Title here"> <br><br>
+    <input id = "description" type="text" placeholder="Enter your Description here"> <br><br>
+    <button onClick = "addTodo()">Add Todo</button>
+    <div id="container1"></div>
+    <!-- <div id="container2"></div> -->
+</body>
+</html>
